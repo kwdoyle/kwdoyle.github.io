@@ -17,7 +17,7 @@ p
 img
 { border: 0;}
 
-h1, h2, h3, h4, h5, h6 
+h1, h2, h3, h4, h5, h6, h7
 { font: bold 175% 'liberation sans', arial, sans-serif;
   color: #3ED305;
   margin: 0 0 5px 0;
@@ -25,6 +25,10 @@ h1, h2, h3, h4, h5, h6
 
 h2
 { font: bold 165% 'liberation sans', arial, sans-serif;}
+
+h7
+{ font: bold 165% 'liberation sans', arial, sans-serif;}
+
 
 h3
 { font: bold 125% 'liberation sans', arial, sans-serif;
@@ -45,6 +49,10 @@ h5, h6
 
 h6
 { color: #362C20;}
+
+
+
+
 
 a, a:hover
 { background: transparent;
@@ -89,9 +97,11 @@ ol li
 #banner_content
 { width: 880px;
   position: relative;
-  height: 250px;
+  height: 200px;
   background: #FFF url(../images/banner.jpg) no-repeat;}
-  
+
+/* the height for banner_content used to be 250 */
+
 #header H1
 { font: normal 200% Arial, Helvetica, sans-serif;
   color: #FFF;}
@@ -150,11 +160,15 @@ span
   width: 201px;}
 
 .sidebar h2
-{ color: #3ED305;}  
+{ color: #3ED305;}
+
+.sidebar h7
+{ color: #FFF;}
   
 .sidebar h4
 { font-size: 125%;
   color: #FFF;}
+
 
 .sidebar p
 { color: #FFF;}
@@ -182,6 +196,7 @@ span
   float: left;
   background: #FFF;}
 
+/* change the width of content_item to lengthen text box, I think */
 .content_item
 { width: 600px;
   margin: 0 0 20px 20px;
