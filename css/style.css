@@ -17,16 +17,13 @@ p
 img
 { border: 0;}
 
-h1, h2, h3, h4, h5, h6, h7
+h1, h2, h3, h4, h5, h6
 { font: bold 175% 'liberation sans', arial, sans-serif;
   color: #3ED305;
   margin: 0 0 5px 0;
   padding: 15px 0 0 0;}
 
 h2
-{ font: bold 165% 'liberation sans', arial, sans-serif;}
-
-h7
 { font: bold 165% 'liberation sans', arial, sans-serif;}
 
 
@@ -160,11 +157,9 @@ span
   width: 201px;}
 
 .sidebar h2
-{ color: #3ED305;}
-
-.sidebar h7
 { color: #FFF;}
-  
+
+
 .sidebar h4
 { font-size: 125%;
   color: #FFF;}
