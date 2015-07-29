@@ -10,6 +10,11 @@ body
   background: #FFF;
   color: #5D5D5D;}
 
+html, body{
+   height: 100%;
+   min-height: 100%;
+}
+
 p
 { padding: 0 0 20px 0;
   line-height: 1.7em;}
@@ -198,9 +203,19 @@ span
   float: left;}
 
 .content_item_2
-{ width: 800px;
+{ width: 600px;
   margin: 0 0 20px 20px;
   float: left;}
+
+.content_item_3
+{ width: 800px;
+  height: 900px;
+  margin: 0 0 20px 20px;
+}
+
+object {
+    border: 1px solid gray;
+}
 
 .content_image
 { width: 250px;
