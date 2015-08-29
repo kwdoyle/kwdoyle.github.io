@@ -203,7 +203,7 @@ span
   float: left;}
 
 .content_item_2
-{ width: 800px;
+{ width: 700px;
   margin: 0 0 20px 20px;
   float: left;}
 
@@ -212,6 +212,11 @@ span
   height: 900px;
   margin: 0 0 20px 20px;
 }
+
+.content_item_4
+{ width: 800px;
+  margin: 0 0 20px 20px;
+  float: left;}
 
 object {
     border: 1px solid gray;
