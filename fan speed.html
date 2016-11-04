@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+  <title>Kevin Doyle</title>
+  <meta name="description" content="Kevin Doyle - Ecology and Evolutionary Biologist" />
+  <meta name="keywords" content="enter your keywords here" />
+  <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/jquery.easing.min.js"></script>
+  <script type="text/javascript" src="js/jquery.lavalamp.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      $("#lava_menu").lavaLamp({
+        fx: "backout",
+        speed: 700
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <div id="main">
+    <div id="header">  
+      <h1><span>Kevin Doyle</span></h1>	
+	  <h2>Ecology and Evolutionary Biologist</h2> 
+    </div><!--close header-->			  
+    <div class="container_header"><p>&nbsp;</p></div>
+    <div id="site_background"> 
+ 	  <div id="banner">  
+		<div id="banner_content">
+		</div><!--close banner_content-->	
+      </div><!--close banner-->		
+	  <div id="site_content">
+	    <div id="menubar">
+          <ul class="lavaLampWithImage" id="lava_menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Research</a></li>
+            <li class="current"><a href="projects2.html">Projects</a></li>
+            <li><a href="book.html">Book</a></li>
+            <li><a href="cv.html">Resume</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+	      <div id="contact">
+	        <a href="https://github.com/kwdoyle"><img src="images/icons/github_new2.png" alt="github" /></a>
+            
+            <a href="https://www.linkedin.com/pub/kevin-doyle/78/31a/788"><img src="images/icons/linkedin_new2.png" alt="linkedin" /></a>
+	      </div><!--close contact-->
+	    </div><!--close menubar-->	
+        <div id="content">
+          <div class="content_item_2">
+            <h2>Seasonal Computer CPU Temperature</h2>
+              <div style="float:left; width:700px;">
+                  <p></p>
+            <p>My old 2009 MacBook was starting to get up there in its age, and I had noticed that its fans were turning on more frequently to cool down the computer. This most likely was due to too much dust caught in the fans but, but seeing as I first noticed that the fan speeds seemingly increased during the summer, I was curious to find out if these increased speeds would remain once the weather outside (and, by extension, the temperature inside the house) began to cool down.</p>
+              
+	        
+		  	  <p>I began this experiment by using the app <a href="https://www.macupdate.com/app/mac/23049/smcfancontrol">smcFanControl</a> to record the current fan speed every 5 minutes from July 30 2015 to April 16 2016. A cron job was used for this instead of launchd so that all missed logs while the computer was asleep wouldn't be run all at once when the computer was woken up. The experiment was eventually stopped after switching to a newer MacBook Pro, as I noticed the fans speed was always 0.</p>
+                
+     
+		  	  <p>Data was then plotted and analyzed in R. Since trying to plot every 5 minute data point was far too noisy, the averages for each day were taken instead. I noted at what points I had upgraded the operating system (to OS X 10.11 El Capitan) and when I switched to a new computer, in case either of those actions had an affect on fan speed.</p>
+              
+              <img src=images/fan%20speed.png>
+           
+	        </div>
+	        <br style="clear:both" />
+              <p></p><p></p><p></p> <!--<p></p> <!--<p></p><p></p> -->
+            <div style="float:left; width:700px;">  
+              <p>Next I chose to perform an ANOVA on these data, treating each season as a seperate treatment. I categorized seasons based on when they started and ended on the calendar. The following groupings can be seen in the following box plot.</p>
+                
+              <img src=images/fan%20boxplot.png>
+            
+	        
+		  	  <p></p>
+                
+              <p>The ANOVA returned a p-value of 6.783*10<sup>-6</sup>, indicating there was a difference among at least one of the seasonal groups. Oddly enough, it appeared that winter actually had higher fan speeds than fall. This seemed counter-intuitive, as you would expect the computer to run cooler when the weather was also cooler. There were most likely other confounding variables at work here, such as the potentially higher inside temperatures from the heater being turned on. </p>
+                
+              <p>To determine which seasons differed from one another, Tukey’s Honest Significant Difference test was performed. The results showed that fall and summer differed (p &lt; 0.005), as well as winter and fall (p &lt; 0.00001), but winter and summer did not differ for whatever strange reason.</p>
+         
+	        </div>
+	        <br style="clear:both" />
+              
+	      <p>&nbsp;</p>
+		  </div><!--close content_item-->
+	    
+		 
+           <br style="clear:both;" />
+        </div><!--close content-->	
+      </div><!--close site_content-->	
+	</div><!--close site_background-->	
+    <div id="footer">  
+	  <div id="footer_content">
+        <a href="http://validator.w3.org/check?uri=referer">Valid XHTML</a> | <a href="http://jigsaw.w3.org/css-validator/check/referer">Valid CSS</a> | website design by <a href="http://www.araynordesign.co.uk">ARaynorDesign</a>
+      </div><!--close footer_content-->	
+    </div><!--close footer-->	
+  </div><!--close main-->	
+</body>
+</html>
